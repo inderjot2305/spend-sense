@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendSensei</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .top-bar {
+            background-color: #0A3D91;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+        }
+
+        
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0A3D91;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            position: relative;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 10px 0;
+            min-width: 150px;
+        }
+
+        .dropdown li {
+            padding: 8px 15px;
+        }
+
+        .dropdown li a {
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+
+        .nav-links li:hover .dropdown {
+            display: block;
+        }
+
+        .btn {
+            background-color: #0A3D91;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            background: linear-gradient(to right, #E0EFFA, #F7FAFD);
+            padding: 20px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .hero-text h4 {
+            color: #0A3D91;
+        }
+
+        .hero-text h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .info-section {
+            display: flex;
+            align-items: center;
+            padding: 50px 20px;
+            background-color: #F7FAFD;
+        }
+
+        .info-box {
+            background-color: white;
+            padding: 30px;
+            border-left: 5px solid #0A3D91;
+            max-width: 500px;
+        }
+
+        .info-box h4 {
+            color: #0A3D91;
+        }
+
+        .info-box h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .info-box p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .info-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 50px 20px;
+            background-color: #bfd4e9;
+        }
+
+        .feature-card {
+            color: #0e0d0d;
+            background-color: rgb(243, 234, 234);
+            padding: 30px;
+            border-left: 5px solid #95b7ee;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .feature-card h4 {
+            color: #111213;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #0f0f0f;}
+            
+    </style>
+</head>
+<body>
+    
+    
+    <nav class="navbar">
+        <div class="logo">SpendSensei
+        </div>
+        <img src="1000086889-removebg (1).png" alt="Spend Sensei Logo" style="height: 90px; width:170px; margin-right: 100px;">
+
+        <ul class="nav-links">
+            <li><a href="#">About</a></li>
+            <li>
+                <a href="#">Features</a>
+                <ul class="dropdown">
+                    <li><a href="Expensetracker.html">Expense</a></li>
+                    
+                </ul>
+            </li>
+            <li>
+                <a href="#">User Tools</a>
+                <ul class="dropdown">
+                    <li><a href="to-do.html">To do</a></li>
+                    
+                </ul>
+            </li>
+            <li>
+                <a href="#">Learn & Save</a>
+                <ul class="dropdown">
+                    <li><a href="#">Learn 1</a></li>
+                    <li><a href="#">Learn 2</a></li>
+                    <li><a href="#">Learn 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Support</a>
+                <ul class="dropdown">
+                    
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="help.html">Help Center</a></li>
+                </ul>
+            </li>
+        </ul>
+       <a href="login.html"> <button class="btn">Get Started</button></a>
+    </nav>
+
+    <section class="info-section">
+        <div class="info-box">
+            <h4>Plan Your Financial Future</h4>
+            <h1>Optimize Your Budget with SpendSensei</h1>
+            <p>SpendSensei helps you set clear financial objectives, track expenses, and make informed decisions to secure your financial future.</p>
+        </div>
+        <div class="info-image">
+            <img src="logooo1.pdf" alt="Financial Growth">
+        </div>
+    </section>
+    <section class="features-section">
+        <div class="feature-card">
+            <h4>Goal-Oriented Budgeting</h4>
+            <p>Define your targets, whether it's a new gadget, a dream vacation, or a future home.</p>
+        </div>
+        <div class="feature-card" style="background-color:#a0c3fc; color:white;">
+            <h4>Expense Tracking Made Easy</h4>
+            <p>Track your spending effortlessly across different categories with our intuitive interface.</p>
+        </div><br>
+        <div class="feature-card">
+            <h4>Custom Alerts & Notifications</h4>
+            <p>Stay informed with automatic alerts when you're nearing your budget limits.</p>
+        </div>
+        <div class="feature-card">
+            <h4>Smart Savings Suggestions</h4>
+            <p>Discover practical ways to reduce spending and accelerate your savings.</p>
+        </div><br>
+        <div class="feature-card" style="background-color:#a0c3fc; color:white;">
+            <h4>Community Engagement</h4>
+            <p>Join a community of like-minded individuals who share their financial journeys.</p>
+        </div>
+        <div class="feature-card">
+            <h4>Achieve Financial Confidence</h4>
+            <p>Embrace a smarter financial future with SpendSensei and achieve your dreams faster.</p>
+        </div>
+    </section>
+</body>
+<script>
+    document.querySelector('.nav-links li a[href="#"]').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+</script>
+</html>
+<script>
+    
